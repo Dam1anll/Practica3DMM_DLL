@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Practica3DMM_DLL.View.PaginaPrincipal">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <StackLayout BackgroundColor="Blue" Padding="25,25,25,25">
+                <Label Text="Actividad: Criticografo" 
+                HorizontalOptions="CenterAndExpand"
+                   FontSize="Title"
+                   TextColor="White"/>
+            </StackLayout>
+            
+            <StackLayout Padding="10,10,10,10">
+                <Label Text="Nombre: " TextColor="Black"/>
+                <Frame BorderColor="Black" Margin="10" Padding="5,5,5,5">
+                    <Entry Placeholder="Escribe su nombre"/>
+                </Frame>
+            </StackLayout>
+            
+            <Grid Padding="10,10,10,10">
+                <Label Text="Genero: " Grid.Row="0" Grid.Column="0" TextColor="Black"/>
+                <RadioButton Content="Hombre" Grid.Row="0" Grid.Column="0" Padding="0,0,0,40"/>
+                <RadioButton Content="Mujer" IsChecked="true" Grid.Row="0" Grid.Column="1"/>
+
+                <CheckBox Grid.Row="1" Grid.Column="0"/>
+                <Label Text="Alto" Grid.Row="1" Grid.Column="0" Padding="35,25,5,5"/>
+                <CheckBox Grid.Row="2" Grid.Column="0"/>
+                <Label Text="Listo" Grid.Row="2" Grid.Column="0" Padding="35,25,5,5"/>
+                <CheckBox Grid.Row="3" Grid.Column="0"/>
+                <Label Text="Raro" Grid.Row="3" Grid.Column="0" Padding="35,25,5,5"/>
+
+                <CheckBox Grid.Row="1" Grid.Column="1"/>
+                <Label Text="Feo" Grid.Row="1" Grid.Column="1" Padding="35,25,5,5"/>
+                <CheckBox Grid.Row="2" Grid.Column="1"/>
+                <Label Text="Extravagante" Grid.Row="2" Grid.Column="1" Padding="35,25,5,5"/>
+                <CheckBox Grid.Row="3" Grid.Column="1"/>
+                <Label Text="Grande" Grid.Row="3" Grid.Column="1" Padding="35,25,5,5"/>
+            </Grid>
+            
+            <StackLayout>
+                <Button Text="Criticar" CornerRadius="5" HorizontalOptions="Center" Padding="100,5,100,5"/>
+            </StackLayout>
+            
+            <Frame BorderColor="Black" Margin="20">
+                <Entry Placeholder="Datos Guardados"/>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
