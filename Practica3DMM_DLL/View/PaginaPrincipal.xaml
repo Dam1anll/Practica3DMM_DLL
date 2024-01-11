@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout>
             
-            <StackLayout BackgroundColor="Blue" Padding="25,25,25,25">
+            <StackLayout BackgroundColor="#63C5DA" Padding="25,25,25,25">
                 <Label Text="Actividad: Criticografo" 
                 HorizontalOptions="CenterAndExpand"
                    FontSize="Title"
@@ -15,36 +15,53 @@
             <StackLayout Padding="10,10,10,10">
                 <Label Text="Nombre: " TextColor="Black"/>
                 <Frame BorderColor="Black" Margin="10" Padding="5,5,5,5">
-                    <Entry Placeholder="Escribe su nombre"/>
+                    <Entry Placeholder="Escribe su nombre" x:Name="Nombre"/>
                 </Frame>
             </StackLayout>
             
             <Grid Padding="10,10,10,10">
                 <Label Text="Genero: " Grid.Row="0" Grid.Column="0" TextColor="Black"/>
-                <RadioButton Content="Hombre" Grid.Row="0" Grid.Column="0" Padding="0,0,0,40"/>
-                <RadioButton Content="Mujer" IsChecked="true" Grid.Row="0" Grid.Column="1"/>
+                <RadioButton Content="Hombre" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"/>
+                <RadioButton Content="Mujer" IsChecked="true" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center"/>
+                
+                <StackLayout Grid.Row="1" Grid.Column="0">
+                    <CheckBox HorizontalOptions="Center"/>
+                    <Label Text="Alto" Padding="5,0,5,5" HorizontalOptions="Center"/>
+                </StackLayout>
 
-                <CheckBox Grid.Row="1" Grid.Column="0"/>
-                <Label Text="Alto" Grid.Row="1" Grid.Column="0" Padding="35,25,5,5"/>
-                <CheckBox Grid.Row="2" Grid.Column="0"/>
-                <Label Text="Listo" Grid.Row="2" Grid.Column="0" Padding="35,25,5,5"/>
-                <CheckBox Grid.Row="3" Grid.Column="0"/>
-                <Label Text="Raro" Grid.Row="3" Grid.Column="0" Padding="35,25,5,5"/>
+                <StackLayout Grid.Row="2" Grid.Column="0">
+                    <CheckBox HorizontalOptions="Center"/>
+                    <Label Text="Listo" Padding="5,0,5,5" HorizontalOptions="Center"/>
+                </StackLayout>
 
-                <CheckBox Grid.Row="1" Grid.Column="1"/>
-                <Label Text="Feo" Grid.Row="1" Grid.Column="1" Padding="35,25,5,5"/>
-                <CheckBox Grid.Row="2" Grid.Column="1"/>
-                <Label Text="Extravagante" Grid.Row="2" Grid.Column="1" Padding="35,25,5,5"/>
-                <CheckBox Grid.Row="3" Grid.Column="1"/>
-                <Label Text="Grande" Grid.Row="3" Grid.Column="1" Padding="35,25,5,5"/>
+                <StackLayout Grid.Row="3" Grid.Column="0">
+                    <CheckBox HorizontalOptions="Center"/>
+                    <Label Text="Raro" Padding="5,0,5,5" HorizontalOptions="Center"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="1" Grid.Column="1">
+                    <CheckBox HorizontalOptions="Center"/>
+                    <Label Text="Feo" Padding="5,0,5,5" HorizontalOptions="Center"/>
+                </StackLayout>
+
+                <StackLayout  Grid.Row="2" Grid.Column="1">
+                    <CheckBox HorizontalOptions="Center"/>
+                    <Label Text="Extravagante" Padding="5,0,5,5" HorizontalOptions="Center"/>
+                </StackLayout>
+
+                <StackLayout Grid.Row="3" Grid.Column="1">
+                    <CheckBox HorizontalOptions="Center"/>
+                    <Label Text="Grande" Padding="5,0,5,5" HorizontalOptions="Center"/>
+                </StackLayout>
+    
             </Grid>
             
             <StackLayout>
-                <Button Text="Criticar" CornerRadius="5" HorizontalOptions="Center" Padding="100,5,100,5"/>
+                <Button Text="Criticar" CornerRadius="5" BackgroundColor="#63C5DA" TextColor="White" HorizontalOptions="Center" Padding="100,5,100,5" Clicked="Guardar"/>
             </StackLayout>
             
             <Frame BorderColor="Black" Margin="20">
-                <Entry Placeholder="Datos Guardados"/>
+                <Entry Placeholder="Datos Guardados" IsEnabled="False"/>
             </Frame>
         </StackLayout>
     </ContentPage.Content>
